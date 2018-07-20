@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bad Words Detector Example</title>
+</head>
+<body>
+
+<input type="text" class="noble-input" />
+
+<script src="bad-words-detector.js"></script>
+<script>
+	new BadWordsDetector({
+		selector 			: '.noble-input',
+		event 				: 'keyup',
+		replace 			: true,
+		replacementChar		: '*',
+		handler				: myCallback
+	});
+
+	function myCallback(element,slang){
+		console.log('A slang has been detected!');
+		console.log('Element: ',element);
+		console.log('Slang : ',slang);
+		// Highlight field, take action, log it somewhere etc.
+	}
+</script>
+</body>
+</html>
